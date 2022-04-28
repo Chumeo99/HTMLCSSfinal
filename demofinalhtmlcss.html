@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid Kinder</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #header{
+            width: 100%;
+            height: 100px;
+            background-color: deepskyblue;
+        }
+
+        #header > #nav > li > a {
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        #nav > .subnav > ul > li > a{
+            text-decoration: none;
+        }
+
+        #nav li {
+            display: inline-block;
+        }
+
+        #nav > li > a{
+            color: white;
+        }
+
+        #nav li a {
+            font-size: larger;
+            line-height: 100px;
+            padding: 0 30px;
+            display: inline-block;
+            position: relative;
+        }
+
+        #nav .subnav ul{
+            display: none;
+            position: absolute;
+        }
+
+        #nav .subnav ul{
+            background-color: grey;
+        }
+
+        #nav li:hover .subnav{
+            display: block;
+        }
+
+        #nav > li:hover > a{
+            color: blue;
+            background-color: grey;
+        }
+
+        #nav li:hover a{
+            color: blue;
+            background-color: white;
+        }
+
+        /* #slider { */
+            /* min-height: 500px; */
+            /* background-color: grey; */
+        /* } */
+
+        #nav .subnav a{
+            color: white;
+        }
+
+        #space{
+            width: 100%;
+            height: 100px;
+            background-color: white;
+        }
+
+        #slider{
+            background-color: white;
+        }
+
+        #content_trai{
+            width: 45%;
+            height: 300px;
+            /* background-color: red; */
+            text-align: center;
+            float: left;
+            background-color: white;
+        }
+
+        #content_phai{
+            width: 52%;
+            height: 300px;
+            /* background-color: gray; */
+            text-align: left;
+            float: left;
+            background-color: white;
+        }
+
+        #content_phai button{
+            font-size: larger;
+        }
+
+        #space_2{
+            width: 100%;
+            height: 100px;
+            /* background-color: brown; */
+            float: left;
+            background-color: white;   
+        }
+
+        #space_3{
+            width: 98%;
+            height: 100px;
+            float: left;
+            /* background-color: aqua; */
+            background-color: white;
+        }
+
+        #space_4{
+            width: 100%;
+            height: 100px;
+            float: left;
+            /* background-color: red; */
+        }
+
+        #space_5{
+            width: 100%;
+            height: 100px;
+            float: left;
+            /* background-color: red; */
+        }
+
+        #our_teacher{
+            width: 100%;
+            height: 100px;
+            float: left;
+            background-color: white;
+            text-align: center;
+            line-height: 100px;
+            color: deepskyblue;
+        }
+
+        #classes{
+            width: 100%;
+            height: 150px;
+            /* background-color: chartreuse; */
+            float: left;
+            text-align: center;
+            line-height: 150px;
+            color: deepskyblue;
+            background-color: white;
+        }
+
+        #content_lower{
+            width: 100%;
+            height: 300px;
+            /* background-color: blueviolet; */
+            text-align: center;
+            float: left;
+            margin-left: 0px;
+            background-color: white;
+        }
+
+        #content_lowerleft{
+            width: 30%;
+            height: 300px;
+            text-align: center;
+            float: left;
+            /* background-color: black; */
+            margin-left: 120px;
+            background-color: white;
+        }
+
+        #content_lowerright{
+            width: 60%;
+            height: 400px;
+            text-align: center;
+            float: left;
+            /* background-color: green; */
+            position: relative;
+            background-color: white;
+        }
+
+        #content_lowerright > #bookaseat{
+            width: 50%;
+            height: 80px;
+            background-color: #00394f;
+            margin-left: 220px;
+            color: white;
+            line-height: 80px;
+            position: relative;
+        }
+
+        #content_lowerright > #form_1{
+            width: 50%;
+            height: 300px;
+            background-color: #17a2b8;
+            margin-left: 220px;
+            position: absolute;
+        }
+        #content_lowerright > #form_1 > .formbook > input{
+            border-radius: 10px;
+            width: 300px;
+            height: 40px;
+            display: block;
+            text-align: center;
+            margin-left: 80px;
+            bottom: 50px;
+            
+        }
+
+        #content_lowerright > #form_1 > .formbook > select{
+            text-align: center;
+            border-radius: 10px;
+            width: 150px;
+            height: 40px;
+            margin-right: 140px;
+        }
+
+        #content_lowerright > #form_1 > .formbook > button{
+            border-radius: 10px;
+            width: 150px;
+            height: 40px;
+            margin-left: 50px;
+            margin-right: 190px;
+        }
+
+        #teacher{
+            background-color: white;
+        }
+
+        #teacher img{
+            text-align: center;
+            border-radius: 50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            font-size: smaller;
+            margin-left: 60px;
+            margin-top: 30px;
+        }
+
+        #bottom{
+            width: 100%;
+            height: 300px;
+            float: left;
+            background-color: #00394f;
+        }
+
+        #Kid_Kinder{
+            width: 25%;
+            height: 300px;
+            float: left;
+            /* background-color: brown; */
+            /* line-height: 300px; */
+            color: white;
+            text-align: center;
+            font-size: x-large;
+        }
+
+        #Kid_Kinder h2{
+            color: #17a2b8;
+        }
+
+        #Address{
+            width: 25%;
+            height: 300px;
+            float: left;
+            /* background-color: rebeccapurple; */
+            /* line-height: 150px; */
+            color: white;
+            text-align: center;
+            font-size: large;
+        }
+        
+        #Address h2{
+            color: #17a2b8;
+        }
+
+        #quick_links{
+            width: 25%;
+            height: 300px;
+            float: left;
+            /* background-color: gold; */
+            color: white;
+            text-align: center;
+            font-size: larger;
+        }
+
+        #quick_links h2{
+            color: #17a2b8;
+        }
+
+        #quick_links table{
+            margin-left: 110px;
+        }
+
+        #quick_links table a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        #imageskid img{
+            width: 20%;
+            height: 200px;
+            float: left;
+            margin-left: 40px;
+            margin-top: 50px;
+            border-radius: 50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+        }
+
+    </style>
+</head> 
+<body>
+    <div id="tong">
+        <div id="header">
+            <ul id="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Classes</a></li>
+                <li><a href="">Teacher</a></li>
+                <li class="subnav">
+                    <a href="">Page</a>
+                    <ul>
+                        <li>
+                            <a href="">Blog Detail</a>
+                        </li>
+                        <li>
+                            <a href="">Blog Grid</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="slider">
+            <img src="images/imgslider.jpg" alt="" width="100%">
+            <div id="space">
+            </div>
+        </div>
+        <div id="content_trai">
+            <img src="images/about1.jpg" alt="" height="300px" width="60%">
+        </div>
+        <div id="content_phai">
+            <h1 style="color: deepskyblue;">
+                Best School for your kids 
+            </h1>
+            <br>
+            <font style="font-size: larger;">
+                Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor
+            </font>
+            <br>
+            <font style="font-size: larger;">
+                Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor
+            </font>
+            <br>
+            <font style="font-size: larger;">
+                Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor
+            </font>
+            <br>
+            <br>
+            <button>
+                <a href="">Learn More</a>
+            </button>
+        </div>
+        <div id="space_2">
+        </div>
+        <div id="classes">
+            <h1>CLASSES FOR YOUR KIDS</h1>
+        </div>
+        <div id="content_lower">
+            <img src="images/class1.jpg" alt="" height="300px" width="28%">
+            <img src="images/class2.jpg" alt="" height="300px" width="28%">
+            <img src="images/class3.jpg" alt="" height="300px" width="28%">
+        </div>
+        <div id="space_3">
+        </div>
+        <div id="content_lowerleft">
+            <font style="text-align: left;">
+                <H1 style="color: deepskyblue;">
+                    BOOK A SEAT
+                </H1>
+            </font>
+            <br>
+            <font style="text-align: left; font-size: larger; color: black; margin-left: -20px;">
+                Invidunt lorem justo sanctus clita. Erat lorem labore
+            </font>
+            <br>
+            <font style="text-align: left; font-size: larger; color: black;">
+                ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor
+            </font>
+            <br>
+            <font style="text-align: left; font-size: larger; color: black; margin-left: -95px;">
+                kasd sit ea justo. Erat justo sed sed diam.
+            </font>
+            <br>
+            <br>
+            <font style="text-align: left; font-size: larger; color: black; margin-left: -20px;">
+                Invidunt lorem justo sanctus clita. Erat lorem labore
+            </font>
+            <br>
+            <font style="text-align: left; font-size: larger; color: black;">
+                ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor
+            </font>
+            <br>
+            <font style="text-align: left; font-size: larger; color: black; margin-left: -95px;">
+                kasd sit ea justo. Erat justo sed sed diam.
+            </font>
+            <br>
+            <br>
+            <font style="text-align: left; font-size: larger; color: black; margin-left: -20px;">
+                Invidunt lorem justo sanctus clita. Erat lorem labore
+            </font>
+            <br>
+            <font style="text-align: left; font-size: larger; color: black;">
+                ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor
+            </font>
+            <br>
+            <font style="text-align: left; font-size: larger; color: black; margin-left: -95px;">
+                kasd sit ea justo. Erat justo sed sed diam.
+            </font>
+            <br>
+            <br>
+            <font style="text-align: left; font-size: larger; color: black; margin-left: -20px;">
+                Invidunt lorem justo sanctus clita. Erat lorem labore
+            </font>
+            <br>
+            <font style="text-align: left; font-size: larger; color: black;">
+                ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor
+            </font>
+            <br>
+            <font style="text-align: left; font-size: larger; color: black; margin-left: -95px;">
+                kasd sit ea justo. Erat justo sed sed diam.
+            </font>
+        </div>
+        <div id="content_lowerright">
+           <div id="bookaseat">
+                <H1>Book a seat</H1>
+           </div>
+           <div id="form_1">
+               <br>
+               <br>
+               <form class="formbook">
+                <input type="text" placeholder="Your Name" width="">
+                <br>
+                <input type="email" placeholder="Email">
+                <br>
+                <select>
+                <option selected>Select A Classes</option>
+                <option value="1">Class 1</option>
+                <option value="2">Class 2</option>
+                <option value="3">Class 3</option>
+                </select>
+                <br>
+                <br>
+                <button style="background-color: #00394f; color: white; font-size: larger;">Book Now</button>
+           </div>
+        </div>
+        <div id="space_4">
+        </div>
+        <div id="our_teacher">
+            <h1>
+                OUR TEACHERS
+            </h1>
+        </div>
+        <div id="teacher">
+            <img src="images/teacher1.jpg" alt="">
+            <img src="images/teacher2.jpg" alt="">
+            <img src="images/teacher3.jpg" alt="">
+            <img src="images/teacher4.jpg" alt="">
+        </div>
+        <div id="space_5">
+        </div>
+        <div id="bottom">
+            <div id="Kid_Kinder">
+                <br>
+                <h2>
+                    KID KINDER
+                    <br>
+                </h2>
+                <br>
+                Labore dolor amet ipsum ea, erat sit ipsum duo eos. Volup amet ea dolor et magna dolor, elitr rebum duo est sed diam elitr. Stet elitr stet diam duo eos rebum ipsum diam ipsum elitr.
+            </div>
+            <div id="Address">
+                <br>
+                <h2>Address</h2>
+                <br>
+                Ha Noi, Viet Nam
+                <br>
+                <br>
+                <h2>Email</h2>
+                <br>
+                Tuananh41099@gmail.com
+                <br>
+                <br>
+                <h2>Phone Number</h2>
+                <br>
+                123456789
+            </div>
+            <div id="quick_links">
+                <br>
+                <h2>Quick links</h2>     
+                <br>
+                <table width="300px" align="center">
+                <tr height="200px">
+                    <td style="text-align: left;">
+                        <a href="">> Home</a>
+                        <br>
+                        <br>
+                        <a href="">> About Us</a>
+                        <br>
+                        <br>
+                        <a href="">> Classes</a>
+                        <br>
+                        <br>
+                        <a href="">> Teacher</a>
+                        <br>
+                        <br>
+                        <a href="">> Pages</a>
+                    </td>
+                </tr>
+                </table>       
+            </div>
+            <div id="imageskid">
+                <img src="images/class2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
